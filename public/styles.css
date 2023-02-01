@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&family=Metal+Mania&display=swap');
+
+body{
+    background-image: url(https://i.pinimg.com/originals/8f/e7/3f/8fe73f5f6694fb455125931de8f204f1.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family:'Kavoon', cursive;
+}
+#seleccionar-asesino {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    color:black;
+    font-size: 45px; 
+    font-family:'Metal Mania', cursive; 
+}
+
+.subtitulo {
+    color: black;
+    font-size: 25px;
+
+}
+
+.tarjetas, .tarjetas-ataques {
+    display:flex;
+    gap: 5px;
+}
+
+.tarjeta-de-asesino {
+    font-size: 25px;
+    width: 200px;
+    height: 250px;
+    background-color: #8BBCCC;
+    background: radial-gradient(circle, rgba(189,8,8,1) 0%, rgba(139,0,0,1) 50%, rgba(0,0,0,1) 100%);
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tarjeta-de-asesino:hover{
+    transform: scale(105%);
+}
+
+.tarjeta-de-asesino img {
+    width: 150px;
+    height: 150px;
+}
+
+input {
+    display: none;
+}
+
+.tarjetas input[type="radio"]:checked + label{
+    padding: 10px;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(146,190,119,1) 51%, rgba(253,187,45,1) 100%);
+}
+
+#boton-asesino {
+    background-color: darkred;
+    border: 2px solid black;
+    border-radius: 15px;
+    color: white;
+    padding: 10px;
+    width: 100px;
+    height: 50px;
+    box-sizing: border-box;
+    margin: 10px;
+    cursor: pointer;
+    box-shadow: 5px 7px 10px black;
+}
+#boton-asesino:hover {
+    transform: scale(105%);
+}
+
+#seleccionar-ataque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#boton-fuego {
+    background-color: red;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100px;
+    height: 45px;
+}
+
+#boton-agua {
+    background-color: blue;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100px;
+    height: 45px;
+}
+
+#boton-rayo {
+    background-color: yellow;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100px;
+    height: 45px;
+}
+
+#mensajes {
+    width: 280px;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 2px solid lightseagreen;
+    background: rgb(255,81,0);
+    background: linear-gradient(216deg, rgba(255,81,0,1) 5%, rgba(38,161,212,1) 50%, rgba(0,255,128,1) 95%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#boton-reiniciar {
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    background-color: cadetblue;
+    width: 100px;
+    font-family: 'Metal Mania', cursive;
+    font-size: 18px;
+}
+
+.moverBoton {
+    border: 2px solid orange;
+    background-color: burlywood;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 3px;
+    margin-top: 5px;
+    border-radius: 5px  ;
+}
+
+.contenedor-vidas {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+	padding: 20px;
+}
+
+.tarjeta-vida {
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+    background: #000046;
+    background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  
+    background: linear-gradient(to right, #1CB5E0, #000046); 
+	backdrop-filter: blur(70px);
+	border: var(--border-blur);
+	box-shadow: var(--box-shadow);
+	border-radius: 15px;
+	padding: 20px;
+
+	width: 125px;
+	height: 300px;
+}
+
+#vidas-jugador,
+#vidas-enemigo {
+	color: #000000;
+	font-size: 40px;
+    text-align: center;
+}
+
+#asesino-jugador,
+#asesino-enemigo {
+	color: #000000;
+	font-size: 20px;
+}
+
+#ver-mapa {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#mapa {
+    border: 2px solid black;
+}
+
+canvas#mapa {
+    width: 400px;
+    height: 400px;
+}
+
+@media (max-width: 560px) {
+    .tarjetas, .tarjetas-ataques {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 300px) {
+    #ver-mapa div{
+        flex-direction:column ;
+        align-items: center;
+        flex-direction: column;
+    }
+}
